@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ABC</title>
+    <!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="global_assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script src="global_assets/js/main/jquery.min.js"></script>
+	<script src="global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<script src="global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<script src="global_assets/js/plugins/ui/slinky.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script src="global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+	<script src="global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="global_assets/js/plugins/pickers/daterangepicker.js"></script>
+	<script src="global_assets/js/core/libraries/jquery_ui/core.min.js"></script>
+	<script src="global_assets/js/plugins/forms/selects/selectboxit.min.js"></script>
+	<script src="global_assets/js/demo_pages/form_selectbox.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="global_assets/js/demo_pages/dashboard.js"></script>
+	<!-- /theme JS files -->
+
+	<!-- 引入 ECharts 文件 -->
+    <script src="echarts.min.js"></script>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+
+	<!-- 引入jQuery文件 -->
+    <script src="jquery.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+    <!-- 创建一个卡片 -->
+    <br><br><br>
+
+    <div class="row">
+        <div class="col-md-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title">单体公司数量<a class="heading-elements-toggle"></a></h6>
+                </div>
+                <div class="panel-body">
+                    <img src="1.png" width=20 height=20 />
+                    62
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title">取数通过数<a class="heading-elements-toggle"></a></h6>
+                </div>
+                <div class="panel-body">
+                    52
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title">映射通过数<a class="heading-elements-toggle"></a></h6>
+                </div>
+                <div class="panel-body">
+                    52
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title">整体通过数<a class="heading-elements-toggle"></a></h6>
+                </div>
+                <div class="panel-body">
+                    57
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        &nbsp;&nbsp;&nbsp;
+        <div class="col-xl-3">  
+            <div class="card">
+                <!-- 为ECharts准备备大小（宽高）的Dom -->
+                <div id="card1" style="width: 400px;height:400px;"></div>
+            </div>
+        </div>
+
+        &nbsp;&nbsp;
+            
+
+        <div class="col-xl-3">  
+            <div class="card">
+                <!-- 为ECharts准备备大小（宽高）的Dom -->
+                <div id="card2" style="width: 400px;height:400px;"></div>
+            </div>
+        </div>
+
+        &nbsp;&nbsp;
+
+        <div class="col-xl-3">  
+            <div class="card">
+                <!-- 为ECharts准备备大小（宽高）的Dom -->
+                <div id="card3" style="width:400px;height:400px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        &nbsp;&nbsp;&nbsp;
+        <div class="card">
+            
+            <h5> <class="panel-title">&nbsp;&nbsp;接口执行明细<a class="heading-elements-toggle"></a></h5>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>公司编码</th>
+                            <th>公司别名</th>
+                            <th>合并负责人</th>
+                            <th>联系方式</th>
+                            <th>ERP系统</th>
+                            <th>计划导入完成时间</th>
+                            <th>状态</th>
+                            <th>整体通过</th>
+                            <th>取数状态</th>
+                            <th>映射通过</th>
+                            <th>接口时间</th>
+                            <th>未映射科目清单</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Eugene</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Eugene</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Eugene</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Eugene</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                            <td>Kopyov</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>  
+    </div>
+
+
+
+    <script type="text/javascript">
+        //#1
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('card1'));
+        //var dom1 = $("#1");
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '销量'
+            },
+            tooltip: {
+                transitionDuration: 0,
+            },
+            legend: {
+                data:['销量']
+            },
+            xAxis: {
+                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+
+        //#2
+        var myChart2 = echarts.init(document.getElementById('card2'));
+        // 指定图表的配置项和数据
+        var option2 = {
+            xAxis: {
+                type: 'category',
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [{
+                data: [150, 230, 224, 218, 135, 147, 260],
+                type: 'line'
+                }],
+            tooltip: {
+                transitionDuration: 0,
+            },
+            } 
+        // 使用刚指定的配置项和数据显示图表。
+        myChart2.setOption(option2);
+
+        //#3
+        var myChart3 = echarts.init(document.getElementById('card3'));
+        // 指定图表的配置项和数据
+        var option3 = {
+                
+                title: {
+                    text: '客户来源',
+                    subtext: '',
+                    left: 'center'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b} : {c} ({d}%)',
+                    transitionDuration: 0
+                },
+                legend: {
+                    orient: 'vertical',
+                    left: 'left',
+                },
+                series: [
+                    {
+                        name: '访问来源',
+                        type: 'pie',
+                        radius: '50%',
+                        data: [
+                            {value: 1048, name: '搜索引擎'},
+                            {value: 735, name: '直接访问'},
+                            {value: 580, name: '邮件营销'},
+                            {value: 484, name: '联盟广告'},
+                            {value: 300, name: '视频广告'}
+                        ],
+                        emphasis: {
+                            itemStyle: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        }
+                    }
+                ]
+            };        
+        // 使用刚指定的配置项和数据显示图表。
+
+        myChart3.setOption(option3);
+
+    </script>
+
+
+</body>
+</html>
