@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel1").slideToggle("slow");
+            });
+
+            $("#panel1").click(function () {
+                $("#panel2").slideToggle("slow");
+            });
+
+            $("#panel2").click(function () {
+                $("#panel3").slideToggle("slow");
+            });
+
+            $("#panel3").click(function () {
+                $("#panel4").slideToggle("slow");
+            });
+
+            $("#panel4").click(function () {
+                $("#panel5").slideToggle("slow");
+            });
+
+
+        });
+    </script>
+
+    <style type="text/css">
+        #panel1,
+        #panel2,
+        #panel3,
+        #panel4,
+        #panel5,
+        #flip {
+            padding: 5px;
+            text-align: center;
+
+            border: solid 1px #c3c3c3;
+        }
+
+        #panel1 {
+            padding: 50px;
+            display: none;
+            background-color: pink;
+        }
+
+        #panel2 {
+            padding: 40px;
+            display: none;
+            background-color: DeepSkyBlue;
+        }
+
+        #panel3 {
+            padding: 30px;
+            display: none;
+            background-color: orange;
+        }
+
+        #panel4 {
+            padding: 20px;
+            display: none;
+            background-color: yellow;
+        }
+
+        #panel5 {
+            padding: 10px;
+            display: none;
+            background-color: green;
+        }
+
+        .b {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="flip"><small>点我，开启或关闭大幕</small></div>
+    <div id="panel1">等等，里面还有一层</div>
+    <div id="panel2"><b>哈，里面还有一层！</b></div>
+    <div id="panel3">
+        <h3>哈哈，里面还有一层！！</h3>
+    </div>
+    <div id="panel4">
+        <h2>哈哈哈，里面还有一层！！！</h2>
+    </div>
+    <div id="panel5">
+        <h1>哥，姐，这回真没有了。不过你可以把它收起来啦！</h1>
+    </div>
+
+</body>
+
+</html>
