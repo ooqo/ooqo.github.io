@@ -3,11 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
-    </script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            $("button").click(function () {
+            $("#fade").click(function () {
                 $("#div1").fadeIn(10000);
                 $("#div2").fadeIn(20000);
                 $("#div3").fadeIn(30000);
@@ -20,28 +19,47 @@
                 $("#div10").fadeIn(100000);
                 $("#div11").fadeIn(120000);
                 $("#div12").fadeIn(130000);
-
             });
+
+            $("#invisible").click(function () {
+                $("div").hide(8000);
+            })
         });
     </script>
+    <style>
+        .btn1 {
+            border: none;
+            height: 3.5em;
+            font-size: 1.2em;
+            margin-top: 0.5em;
+            width: 100%;
+            border-radius: 1em;
+        }
+
+        div {
+            width: calc(100vw);
+        }
+    </style>
 </head>
 
 <body>
-    <p>以下实例演示了 fadeIn() 使用了不同参数的效果。</p>
-    <button>点击淡入 div 元素。</button>
+    <p>fadeIn淡入</p>
+    <button id="fade" class="btn1">淡入</button>
+    <button id="invisible" class="btn1">淡出</button>
+
     <br><br>
-    <div id="div1" style="width:800px;height:40px;display:none;background-color:red;"></div>
-    <div id="div2" style="width:800px;height:40px;display:none;background-color:green;"></div>
-    <div id="div3" style="width:800px;height:40px;display:none;background-color:blue;"></div>
-    <div id="div4" style="width:800px;height:40px;display:none;background-color:red;"></div>
-    <div id="div5" style="width:800px;height:40px;display:none;background-color:green;"></div>
-    <div id="div6" style="width:800px;height:40px;display:none;background-color:blue;"></div>
-    <div id="div7" style="width:800px;height:40px;display:none;background-color:red;"></div>
-    <div id="div8" style="width:800px;height:40px;display:none;background-color:green;"></div>
-    <div id="div9" style="width:800px;height:40px;display:none;background-color:blue;"></div>
-    <div id="div10" style="width:800px;height:40px;display:none;background-color:red;"></div>
-    <div id="div11" style="width:800px;height:40px;display:none;background-color:green;"></div>
-    <div id="div12" style="width:800px;height:40px;display:none;background-color:blue;"></div>
+    <div id="div1" style="height:40px;display:none;background-color:red;"></div>
+    <div id="div2" style="height:40px;display:none;background-color:green;"></div>
+    <div id="div3" style="height:40px;display:none;background-color:blue;"></div>
+    <div id="div4" style="height:40px;display:none;background-color:red;"></div>
+    <div id="div5" style="height:40px;display:none;background-color:green;"></div>
+    <div id="div6" style="height:40px;display:none;background-color:rgb(0, 174, 255);"></div>
+    <div id="div7" style="height:40px;display:none;background-color:rgb(255, 132, 0);"></div>
+    <div id="div8" style="height:40px;display:none;background-color:green;"></div>
+    <div id="div9" style="height:40px;display:none;background-color:rgb(0, 255, 136);"></div>
+    <div id="div10" style="height:40px;display:none;background-color:rgb(229, 255, 0);"></div>
+    <div id="div11" style="height:40px;display:none;background-color:rgba(7, 255, 181, 0.946);"></div>
+    <div id="div12" style="height:40px;display:none;background-color:rgb(0, 225, 255);"></div>
 
 </body>
 
